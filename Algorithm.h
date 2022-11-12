@@ -10,6 +10,7 @@ class Algorithm {
     int *Y; // массив из количества компьютеров в i аудитории
     virtual void sort_arrays();
 public:
+    int iteration_count = 0;
     Algorithm(const int N, const int M, int *X, int *Y): N(N), M(M) {
         this->X = new int[N];
         this->X_indx = new int[N];

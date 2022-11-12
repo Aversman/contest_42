@@ -9,6 +9,7 @@ void Algorithm::sort_arrays() {
                 SWAP(this->X[j], this->X[j+1]);
                 SWAP(this->X_indx[j], this->X_indx[j+1]);
                 flag = 1;
+                this->iteration_count++;
             }
         }
         if (flag == 0) {
@@ -22,6 +23,7 @@ void Algorithm::sort_arrays() {
                 SWAP(this->Y[j], this->Y[j+1]);
                 SWAP(this->Y_indx[j], this->Y_indx[j+1]);
                 flag = 1;
+                this->iteration_count++;
             }
         }
         if (flag == 0) {
@@ -45,6 +47,7 @@ int *Algorithm::solve_problem(int *counter) {
                 count++;
                 classes[this->X_indx[i]] = this->Y_indx[j] + 1;
                 iter = j + 1;
+                this->iteration_count++;
                 break;
             }
         }
